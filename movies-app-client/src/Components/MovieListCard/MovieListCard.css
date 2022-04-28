@@ -1,0 +1,72 @@
+.movie-card {
+  width: 300px;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.856);
+  color: var(--white-color);
+  position: relative;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.movie-card img {
+  width: 100%;
+  position: relative;
+}
+.data-container {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 1.2rem;
+  background-color: var(--secondary-color);
+  padding: 2px 4px;
+  z-index: 2;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3px;
+  height: 170px;
+  margin: 10px;
+}
+.movie-info > div:first-of-type {
+  align-self: center;
+}
+.movie-info > div:last-of-type {
+  align-self: flex-end;
+}
+
+.movie-info span.rating {
+  background-color: yellow;
+  color: var(--primary-color);
+  margin-right: 5px;
+}
+.genre-badge {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 3px 0;
+}
+.genre-badge > span {
+  background-color: var(--secondary-color);
+  padding: 5px;
+}
+.overview-container {
+  position: absolute;
+  background-color: var(--white-color);
+  color: var(--primary-color);
+  letter-spacing: 1px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  padding: 2rem;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+.movie-card:hover .overview-container {
+  transform: translateY(0);
+}

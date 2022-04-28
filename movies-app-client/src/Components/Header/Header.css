@@ -1,0 +1,32 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  padding: 10px;
+}
+
+.sign-btn,
+.log-btn {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  font-size: 0.9rem;
+  width: 80px;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.year-container {
+  font-size: 1.1rem;
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+  border-radius: 3px;
+  border: none;
+}

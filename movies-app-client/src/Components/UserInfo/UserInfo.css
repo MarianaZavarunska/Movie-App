@@ -1,0 +1,23 @@
+.user-info-container {
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 50px;
+}
+.user-info-container > img {
+  width: 100%;
+  color: var(--primary-color);
+  border: 2px solid var(--white-color);
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.user-info-container > div {
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.user-info-container.on {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}

@@ -1,0 +1,18 @@
+.images-container {
+  display: flex;
+  gap: 25px;
+  max-width: 990px;
+  width: 100%;
+  max-height: 250px;
+  height: 100%;
+  overflow-x: scroll;
+  box-shadow: 0px 2px 3px var(--primary-color);
+}
+.images-container > div {
+  width: 500px;
+}
+
+.images-container > div > img {
+  height: 99%;
+  box-shadow: 0px 2px 5px var(--primary-color);
+}

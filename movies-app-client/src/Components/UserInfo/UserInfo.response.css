@@ -1,0 +1,5 @@
+@media screen and (max-height: 400px) {
+  .user-info-container {
+    flex-direction: column;
+  }
+}

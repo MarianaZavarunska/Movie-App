@@ -1,0 +1,12 @@
+.social-media-container {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  color: var(--white-color);
+  background-color: transparent;
+  margin-right: 70px;
+}
+
+.on {
+  color: var(--primary-color);
+}

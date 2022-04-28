@@ -1,0 +1,6 @@
+{
+    "trailingComma": "ES2021",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true
+}

@@ -1,0 +1,11 @@
+@media screen and (max-width: 400px) {
+  .social-media-container {
+    justify-content: center;
+    margin: 10px 0px 0px;
+  }
+}
+@media screen and (max-height: 400px) {
+  .social-media-container {
+    margin-right: 100px;
+  }
+}

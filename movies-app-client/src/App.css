@@ -1,0 +1,23 @@
+@import "~antd/dist/antd.css";
+
+:root {
+  --primary-color: #05070d;
+  --secondary-color: #02286e;
+  --white-color: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.8);
+  /* --change-color: rgba(117, 158, 206, 0.445); */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease-in-out;
+  padding: 0;
+  margin: 0;
+}
+body.on {
+  background-color: var(--white-color);
+}

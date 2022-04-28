@@ -1,0 +1,9 @@
+@media screen and (max-width: 400px) {
+  .movies-container {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .movie-card {
+    width: auto;
+  }
+}

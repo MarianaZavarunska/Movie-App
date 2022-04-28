@@ -1,0 +1,32 @@
+@media screen and (max-width: 390px) {
+  .movie-info-wrapper {
+    flex-direction: column;
+  }
+  .poster-container > img {
+    width: 100%;
+  }
+  .images-container {
+    max-width: 100%;
+    gap: 5px;
+  }
+  .reviews-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .review-container {
+    max-width: 95%;
+    height: 200px;
+  }
+  .review-container > div:first-of-type {
+    font-size: 1rem;
+  }
+  .videos-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .video-container {
+    width: 100%;
+  }
+}
