@@ -7,7 +7,9 @@ interface IUserState {
   user: IUser | undefined;
   isModalActive: boolean;
   isRegisterActive: boolean;
-  isLogInActive: boolean;
+    isLogInActive: boolean;
+    isProfileActive: boolean;
+    isForgotPassword: boolean;
   accessToken: string | undefined;
   refreshToken: string | undefined;
   status: number | undefined;
@@ -25,6 +27,8 @@ const initialState: IUserState = {
   isModalActive: false,
   isRegisterActive: false,
   isLogInActive: false,
+    isProfileActive: false,
+    isForgotPassword: false,
   accessToken: undefined,
   refreshToken: "",
   status: 200,
@@ -90,7 +94,9 @@ const userSlice = createSlice({
     setLogInActive: (state, action: PayloadAction<{ isActive: boolean }>) => {
       state.isLogInActive =  action.payload.isActive;
     },
-
+    setForgotPassword: (state, action: PayloadAction<{ isActive: boolean }>) => {
+        state.isForgotPassword = action.payload.isActive;
+    },
     setOutToken: (state) => {
       state.accessToken = undefined;
     }
@@ -123,4 +129,4 @@ const userReducer = userSlice.reducer;
 
 export { userReducer };
 
-export const { setLogInData, setModalActive, setRegisterActive, setLogInActive, setOutToken } = userSlice.actions;
+export const { setLogInData, setModalActive, setRegisterActive, setLogInActive,  setForgotPassword, setOutToken } = userSlice.actions;

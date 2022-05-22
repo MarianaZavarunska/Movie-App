@@ -36,6 +36,9 @@ class TokenService {
 
         const tokenFromDB = await tokenRepository.findTokenByParams({ userId });
 
+        console.log('=======token=======');
+        console.log(tokenFromDB);
+        console.log('=======token end=======');
         if (tokenFromDB) {
             tokenFromDB.accessToken = accessToken;
             tokenFromDB.refreshToken = refreshToken;

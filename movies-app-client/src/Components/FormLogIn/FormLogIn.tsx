@@ -1,10 +1,10 @@
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import { useForm } from "react-hook-form";
 import { joiResolver } from "@hookform/resolvers/joi";
 
 import { useAppDispatch} from "../../hooks";
 import { IUser, IUserLogInResponse } from "../../interfaces";
-import { setLogInActive, setModalActive, setRegisterActive, userLogIn } from "../../store/slices";
+import { setLogInActive, setModalActive, setRegisterActive, setForgotPassword, userLogIn } from "../../store/slices";
 import { userValidator } from "../../validators/user.validator";
 import "./FormLogIn.css";
 
@@ -46,10 +46,20 @@ const FormLogIn: FC = () => {
           )}
         </div>
         <div className="btn-container">
-        <button type="submit">Log In</button>
-        <button onClick={() => {dispatch(setRegisterActive({isActive: true}));dispatch(setLogInActive({ isActive: false }));} }>Sign Up</button>
+            <button type="submit">Log In</button>
+                  
+                  <button onClick={() => {
+                      dispatch(setRegisterActive({ isActive: true }));
+                      dispatch(setLogInActive({ isActive: false }));
+                  }}>Sign Up</button>
+                  
+                  <button onClick={() => {
+                      dispatch(setRegisterActive({ isActive: false }));
+                      dispatch(setLogInActive({ isActive: false }));
+                      dispatch(setForgotPassword({ isActive: true }))
+                  }} >Forgot Password ?</button>
         </div>
-       
+      
       </form>
     
      
@@ -57,4 +67,4 @@ const FormLogIn: FC = () => {
   );
 };
 
-export default FormLogIn;
+export { FormLogIn };

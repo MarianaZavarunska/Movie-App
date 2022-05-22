@@ -18,3 +18,6 @@ export * from "./ThemeSwitcher/ThemeSwitcher";
 export * from "./SocialMedia/SocialMedia";
 export * from "./ModalWindow/ModalWindow";
 export * from "./FormRegister/FormRegister";
+export * from "./FormLogIn/FormLogIn";
+export * from "./FormFogotPassword/FormForgotPassword";
+export * from "./Profile/Profile";

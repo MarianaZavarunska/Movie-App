@@ -1,10 +1,10 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
 
-import { Form, GenreList, UserInfo, Logo, ThemeSwitcher } from "..";
+import { Form, GenreList, UserInfo, Logo, ThemeSwitcher, FormForgotPassword, FormLogIn,  FormRegister } from "..";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { setLogInActive, setModalActive, setOutToken, setRegisterActive, setYearFilter } from "../../store/slices";
-import FormLogIn from "../FormLogIn/FormLogIn";
-import { FormRegister } from "../FormRegister/FormRegister";
+
 import ModalWindow from "../ModalWindow/ModalWindow";
 import "./Header.css";
 import "./Header.responsive.css";
@@ -12,7 +12,7 @@ import "./Header.responsive.css";
 const Header: FC = () => {
   const dispatch = useAppDispatch();
   const { isSwitched } = useAppSelector((state) => state.moviesReducer);
-  const { isRegisterActive, isLogInActive} = useAppSelector((state) => state.userReducer);
+  const { isRegisterActive, isLogInActive,  isForgotPassword} = useAppSelector((state) => state.userReducer);
   const { accessToken } = useAppSelector((state) => state.userReducer);
 
   return (
@@ -39,7 +39,13 @@ const Header: FC = () => {
       <GenreList />
       <Form />
       <UserInfo />
-
+          
+     <div className="log-btn" >
+     <Link to={'profile'} style={{ display: accessToken ? "block" : "none" , color: "white"}}> 
+      Profile
+      </Link> 
+          </div>
+          
       <button
         className="log-btn"
         style={{ backgroundColor: isSwitched ? "#05020D" : "#02286e" }}
@@ -53,10 +59,11 @@ const Header: FC = () => {
         }}
       >
         {accessToken ? "Log Out" : "Log In"}
-      </button>
+          </button>
+          
     
       <ModalWindow>
-        {isRegisterActive ? <FormRegister/> :  isLogInActive ? <FormLogIn /> : null}
+        {isRegisterActive ? <FormRegister/> :  isLogInActive ? <FormLogIn /> : isForgotPassword ? <FormForgotPassword/> : null}
       </ModalWindow>
     
     </div>

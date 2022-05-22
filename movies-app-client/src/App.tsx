@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 import "./App.css";
 import Layout from "./Components/Layout/Layout";
-import { MovieDetailsPage, MoviesPage } from "./pages";
+import { MovieDetailsPage, MoviesPage, ProfilePage } from "./pages";
 
 const App: FC = () => {
   return (
@@ -13,7 +13,9 @@ const App: FC = () => {
           <Route index element={<Navigate to={"movies"} />} />
 
           <Route path={"movies"} element={<MoviesPage />}></Route>
-          <Route path={"/movies/:id"} element={<MovieDetailsPage />}></Route>
+                  <Route path={"/movies/:id"} element={<MovieDetailsPage />}></Route>
+                  
+          <Route path={"profile"} element={<ProfilePage />} ></Route>
         </Route>
       </Routes>
     </div>

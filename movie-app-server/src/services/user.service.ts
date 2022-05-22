@@ -22,7 +22,9 @@ class UserService {
 
     public async creteUser(user: IUserEntity): Promise<IUserEntity> {
         const { password } = user;
+        console.log('=======user=======');
         console.log(user);
+        console.log('=======end user=======');
         const hashedPassword = await this._hashPassword(password);
         const data = { ...user, password: hashedPassword, avatar: '' };
 
