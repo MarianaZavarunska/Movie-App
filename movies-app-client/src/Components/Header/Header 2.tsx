@@ -1,10 +1,9 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 
-import { Form, GenreList, UserInfo, Logo, ThemeSwitcher, FormLogIn,  FormRegister } from "..";
+import { Form, GenreList, UserInfo, Logo, ThemeSwitcher, FormForgotPassword, FormLogIn,  FormRegister } from "..";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { setLogInActive, setModalActive, setOutToken, setRegisterActive, setYearFilter } from "../../store/slices";
-import { FormForgotEmail } from "../FormFogotEmail/FormForgotEmail";
 
 import ModalWindow from "../ModalWindow/ModalWindow";
 import "./Header.css";
@@ -64,7 +63,7 @@ const Header: FC = () => {
           
     
       <ModalWindow>
-        {isRegisterActive ? <FormRegister/> :  isLogInActive ? <FormLogIn /> : isForgotPassword ? <FormForgotEmail/> : null}
+        {isRegisterActive ? <FormRegister/> :  isLogInActive ? <FormLogIn /> : isForgotPassword ? <FormForgotPassword/> : null}
       </ModalWindow>
     
     </div>
